@@ -1,0 +1,35 @@
+Hey Omar, I am still trying to get Quartus to analyze my verilog files, but every time I fix one error another one pops up.
+Once I am finally able to get Quartus to successfully run the analysis I will post the results here. Until then, here are the 
+current errors that I am working through.
+
+Quartus Compilation Report Errors:
+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+	Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+	Info: Processing started: Thu Oct 25 07:36:45 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off EECE-371 -c EECE-371
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file mat_mul.v
+	Info (12023): Found entity 1: MAT_MUL
+Info (12021): Found 1 design units, including 1 entities, in source file mac_tb.v
+	Info (12023): Found entity 1: MAC_TB
+Info (12021): Found 1 design units, including 1 entities, in source file mac.v
+	Info (12023): Found entity 1: MAC
+Info (12021): Found 1 design units, including 1 entities, in source file ff.v
+	Info (12023): Found entity 1: FF
+Info (12021): Found 1 design units, including 1 entities, in source file mat_mul_tb.v
+	Info (12023): Found entity 1: MAT_MUL_TB
+Warning (10236): Verilog HDL Implicit Net warning at MAT_MUL_TB.v(12): created implicit net for "MUL"
+Warning (12125): Using design file eece-371.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+	Info (12023): Found entity 1: EECE-371
+Info (12127): Elaborating entity "EECE-371" for the top level hierarchy
+Warning (12158): Entity "EECE-371" contains only dangling pins
+Error (12061): Can't synthesize current design -- Top partition does not contain any logic
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 4 warnings
+	Error: Peak virtual memory: 4739 megabytes
+	Error: Processing ended: Thu Oct 25 07:38:03 2018
+	Error: Elapsed time: 00:01:18
+	Error: Total CPU time (on all processors): 00:01:18
+Error (293001): Quartus Prime Full Compilation was unsuccessful. 3 errors, 4 warnings
